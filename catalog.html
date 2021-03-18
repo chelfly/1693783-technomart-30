@@ -54,11 +54,11 @@
                   <path
                     d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" />
                 </svg>
-              Равшан Джамшутович
+                Равшан Джамшутович
               </a>
               <a class="header-general__logout" href="#">
                 <svg width="20" height="17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z"/>
+                  <path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" />
                   <path
                     d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" />
                 </svg>
@@ -134,25 +134,39 @@
                   <legend>Производители:</legend>
                   <ul>
                     <li>
-                      <input class="visually-hidden filter__input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
-                      <label for="filter-bosch">Bosch
+                      <label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="bosch" checked>
+                        <span class="filter__checkbox"></span>
+                        Bosch
                       </label>
                     </li>
                     <li>
-                      <input class="visually-hidden filter__input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
-                      <label for="filter-interskol">Интерскол</label>
+                      <label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="interskol">
+                        <span class="filter__checkbox"></span>
+                        Интерскол
+                      </label>
                     </li>
                     <li>
-                      <input class="visually-hidden filter__input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
-                      <label for="filter-makita">Makita</label>
+                      <label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="makita" checked>
+                        <span class="filter__checkbox"></span>
+                        Makita
+                      </label>
                     </li>
                     <li>
-                      <input class="visually-hidden filter__input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
-                      <label for="filter-dewalt">DEWALT</label>
+                      <label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="dewalt">
+                        <span class="filter__checkbox"></span>
+                        DEWALT
+                      </label>
                     </li>
                     <li>
-                      <input class="visually-hidden filter__input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
-                      <label for="filter-hitachi">Hitachi</label>
+                      <label>
+                        <input class="visually-hidden filter__input-checkbox" type="checkbox" name="hitachi">
+                        <span class="filter__checkbox"></span>
+                        Hitachi
+                      </label>
                     </li>
                   </ul>
                 </fieldset>
@@ -160,12 +174,13 @@
                   <legend>Питание:</legend>
                   <ul>
                     <li>
-                      <input class="visually-hidden filter__input-radio" type="radio" name="power" value="battery" id="filter-battery"
-                        checked>
+                      <input class="visually-hidden filter__input-radio" type="radio" name="power" value="battery"
+                        id="filter-battery" checked>
                       <label for="filter-battery">Аккумуляторные</label>
                     </li>
                     <li>
-                      <input class="visually-hidden filter__input-radio" type="radio" name="power" value="cable" id="filter-cable">
+                      <input class="visually-hidden filter__input-radio" type="radio" name="power" value="cable"
+                        id="filter-cable">
                       <label for="filter-cable">Сетевые</label>
                     </li>
                   </ul>
@@ -180,7 +195,8 @@
               <a class="sorting__bytype sorting__bytype-current" href="#">по цене</a>
               <a class="sorting__bytype" href="#">по типу</a>
               <a class="sorting__bytype" href="#">по функционалу</a>
-              <a class="sorting__arrow-asc sorting__arrows sorting__arrows-current" href="#" aria-label="Сортировка по возрастанию"></a>
+              <a class="sorting__arrow-asc sorting__arrows sorting__arrows-current" href="#"
+                aria-label="Сортировка по возрастанию"></a>
               <a class="sorting__arrow-desc sorting__arrows" href="#" aria-label="Сортировка по убыванию"></a>
             </div>
             <div class="catalog__goods">
@@ -399,6 +415,16 @@
       </div>
     </div>
   </footer>
+  <section class="popup popup-cart">
+    <div class="popup-cart__added">
+      <p class="popup-cart__added-text">Товар добавлен в корзину!</sp>
+    </div>
+    <div class="popup-buttons">
+      <a class="popup-cart__button-order" href="#">Оформить заказ</a>
+      <a class="popup-cart__button-buymore" href="#">Продолжить покупки</a>
+    </div>
+    <button class="popup__close popur-cart__close" type="button" aria-label="Закрыть уведомление"></button>
+  </section>
 </body>
 
 </html>

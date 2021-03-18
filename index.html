@@ -25,7 +25,10 @@
         <form class="header__search" action="https://echo.htmlacademy.ru" method="GET">
           <label for="search" class="visually-hidden">Найти на сайте</label>
           <input class="header__search-input" id="search" type="search" placeholder="Поиск:">
-          <svg width="17" height="17" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+          <svg width="17" height="17" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" />
+          </svg>
         </form>
         <a class="header__favourites" href="#">Закладки: 0</a>
         <a class="header__cart" href="#">Корзина: 0</a>
@@ -46,7 +49,11 @@
           </div>
           <div class="header-general__buttons">
             <a class="header-general__login" href="#">
-              <svg width="20" height="17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg"><path d="M14.17 8.5L5.7 0v6H0v5h5.71v6l8.46-8.5z"/><path d="M16.18 15.01h-4.8V17h4.8c2.07 0 2.86-1.81 2.88-3.03V3.03C19.04 1.8 18.26 0 16.18 0h-4.8v1.99h4.8c.8 0 .94.68.96 1.06v10.9c-.02.38-.16 1.06-.96 1.06z"/></svg>
+              <svg width="20" height="17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.17 8.5L5.7 0v6H0v5h5.71v6l8.46-8.5z" />
+                <path
+                  d="M16.18 15.01h-4.8V17h4.8c2.07 0 2.86-1.81 2.88-3.03V3.03C19.04 1.8 18.26 0 16.18 0h-4.8v1.99h4.8c.8 0 .94.68.96 1.06v10.9c-.02.38-.16 1.06-.96 1.06z" />
+              </svg>
               Войти
             </a>
             <a class="header-general__signup" href="#">Регистрация</a>
@@ -375,6 +382,38 @@
       </div>
     </div>
   </footer>
+  <section class="popup popup-feedback">
+    <button class="popup__close popup-feedback__close" type="button" aria-label="Закрыть уведомление"></button>
+    <form class="popup-feedback__form" method="POST" action="https://echo.htmlacademy.ru">
+      <ul class="popup-feedback__form-fields">
+        <li>
+          <label class="text-cuprum" for="name">Ваше имя:</label>
+          <input class="popup-feedback__input text-ptsans popup-feedback__input-name" type="text" name="name" id="name"
+            placeholder="Имя Фамилия">
+        </li>
+        <li>
+          <label class="text-cuprum" for="email">Ваш e-mail:</label>
+          <input class="popup-feedback__input text-ptsans popup-feedback__input-email" type="email" name="email"
+            id="email" placeholder="email@example.com">
+        </li>
+        <li>
+          <label class="text-cuprum" for="text">Текст письма:</label>
+          <textarea class="popup-feedback__input text-ptsans popup-feedback__input-text" name="text" id="text" cols="60"
+            rows="4" placeholder="В свободной форме"></textarea>
+        </li>
+      </ul>
+    </form>
+    <div class="popup-buttons">
+      <a class="popup-feedback__button" href="#">Отправить</a>
+    </div>
+  </section>
+  <section class="popup popup-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123838!2d30.320894615898915!3d59.938796869048154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sil!4v1615963182178!5m2!1sru!2sil"
+      width="943" height="442" style="border:0;" allowfullscreen="" loading="lazy"
+      title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    <button class="popup__close popup-map__close" type="button" aria-label="Закрыть уведомление"></button>
+  </section>
 </body>
 
 </html>

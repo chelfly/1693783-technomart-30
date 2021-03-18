@@ -16,6 +16,7 @@
   --shadow-grey: #CFCFCF;
   --shadow-navy: #405069;
   --shadow-darknavy: #293449;
+  --popup-grey: #F1F1F1;
   --greenlight: #8ED78F;
   --green: #5FBB2D;
   --greengrass: #00CA74;
@@ -33,7 +34,7 @@
   --greyextralight: #EAEAEA;
   --greyborder: #E5E5E5;
   --greylight: #D7DCDE;
-  --greyradiodark: #B5B5B5;
+  --greydarkhover: #B5B5B5;
   --grey: #A9A9A9;
   --greydark: #ABABAB;
   --greyextradark: #212A3A;
@@ -1381,16 +1382,31 @@ img {
   display: block;
 }
 
-.filter__input-checkbox + label::before {
-  content: "";
+.filter-brand label {
+  position: relative;
+}
+
+.filter__checkbox {
   position: absolute;
-  left: -35px;
-  top: -2px;
-  width: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  width: 27px;
   height: 23px;
-  border: 2px solid var(--basic-greylight);
-  border-radius: 4px;
-  box-sizing: border-box;
+  left: -35px;
+  top: -3px;
+  cursor: pointer;
+}
+
+.filter__input-checkbox:checked + .filter__checkbox {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.filter__input-checkbox:hover + .filter__checkbox {
+  background-image: url(../img/checkbox-off-hover.svg);
+}
+
+.filter__input-checkbox:checked:hover + .filter__checkbox {
+  background-image: url(../img/checkbox-on-hover.svg);
 }
 
 .filter__input-radio + label::before {
@@ -1416,11 +1432,11 @@ img {
 }
 
 .filter__input-radio:hover + label:hover::before {
-  border-color: var(--greyradiodark);
+  border-color: var(--greydarkhover);
 }
 
 .filter__input-radio:checked:hover + label:hover::after {
-  background-color: var(--greyradiodark);
+  background-color: var(--greydarkhover);
 }
 
 .filters button {
@@ -1749,3 +1765,153 @@ img {
   text-decoration: none;
   color: var(--basic-red);
 }
+
+/* Pop-ups */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 20px var(--shadow-lightgrey);
+  background-color: var(--white);
+  border-top: 7px solid var(--basic-red);
+  box-sizing: border-box;
+}
+
+.popup__close {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  cursor: pointer;
+}
+
+.popup-buttons {
+  min-height: 112px;
+  background-color: var(--popup-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-feedback {
+  width: 620px;
+  height: 430px;
+  display: none;
+}
+
+.popup-feedback__form-fields {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  margin: 26px 0 34px 0;
+}
+
+.popup-feedback__form label {
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 11px;
+}
+
+.popup-feedback__input {
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+  padding: 5px 10px 5px 12px;
+  min-width: 220px;
+  box-sizing: border-box;
+}
+
+.popup-feedback__input-name {
+  margin-right: 20px;
+}
+
+.popup-feedback__input-text {
+  padding: 5px 8px 8px 12px;
+}
+
+.popup-feedback__button {
+  color: white;
+  background-color: var(--basic-red);
+  padding: 11px 200px 9px 198px;
+}
+
+.popup-feedback__close {
+  top: 14px;
+  right: 11px;
+}
+
+.popup-map {
+  width: 943px;
+  height: 449px;
+  display: none;
+}
+
+.popup-map__close {
+  top: 10px;
+  right: 12px;
+}
+
+.popup-cart {
+  width: 620px;
+  height: 282px;
+  display: none;
+}
+
+.popup-cart__added {
+  text-align: center;
+}
+
+.popup-cart__added-text {
+  display: block;
+  padding-top: 67px;
+  padding-bottom: 67px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  position: relative;
+  margin: 0;
+}
+
+.popup-cart__added-text::before {
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  content: "";
+  background-image: url(../img/icon-mark.svg);
+  left: 81px;
+  top: 48px;
+}
+
+.popup-buttons a {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.popup-cart__button-order {
+  color: var(--white);
+  padding: 11px 46px 9px 47px;
+  margin-right: 10px;
+  background-color: var(--basic-red);
+}
+
+.popup-cart__button-buymore {
+  padding: 11px 31px 9px 32px;
+  background-color: var(--white);
+}
+
+.popur-cart__close {
+  top: 11px;
+  right: 11px;
+}
+
+
