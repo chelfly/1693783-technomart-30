@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
@@ -8,10 +7,9 @@
   <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
   <header class="text-cuprum">
     <div class="header-top">
@@ -43,7 +41,7 @@
           <p class="header-general__about">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
           <div class="header-general__contacts page-catalog">
             <span class="visually-hidden">Телефон:</span>
-            <a class="header-general__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <a class="header-general__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <span class="visually-hidden">Адрес:</span>
             <p class="header-general__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
@@ -72,13 +70,13 @@
         </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Компания</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li class="main-nav__list-item"><a href="index.html">Главная</a></li>
+            <li class="main-nav__list-item"><a href="#">Компания</a></li>
+            <li class="main-nav__list-item"><a href="#">Каталог</a></li>
+            <li class="main-nav__list-item"><a href="#">Новости</a></li>
+            <li class="main-nav__list-item"><a href="#">Спецпредложения</a></li>
+            <li class="main-nav__list-item"><a href="#">Доставка</a></li>
+            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -205,8 +203,8 @@
                 <img class="bosch-6000" src="img/bosch-6000.png" alt="Перфоратор BOSCH BFG 6000" width="144"
                   height="128">
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">30500 Р.</s>
                 <div class="popular__newprice">25500 Р.</div>
@@ -216,8 +214,8 @@
                 <img class="bosch-6000" src="img/bosch-6000.png" alt="Перфоратор BOSCH BFG 6000" width="144"
                   height="128">
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">30500 Р.</s>
                 <div class="popular__newprice">25500 Р.</div>
@@ -228,8 +226,8 @@
                   height="128">
                 <span class="new text-button">New</span>
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">30500 Р.</s>
                 <div class="popular__newprice">25500 Р.</div>
@@ -240,8 +238,8 @@
                   height="112">
                 <span class="new text-button">New</span>
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">22500 Р.</s>
                 <div class="popular__newprice">15500 Р.</div>
@@ -251,8 +249,8 @@
                 <img class="bosch-6000" src="img/bosch-6000.png" alt="Перфоратор BOSCH BFG 6000" width="144"
                   height="128">
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">30500 Р.</s>
                 <div class="popular__newprice">25500 Р.</div>
@@ -263,8 +261,8 @@
                   height="112">
                 <span class="new text-button">New</span>
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">22500 Р.</s>
                 <div class="popular__newprice">12500 Р.</div>
@@ -275,8 +273,8 @@
                   height="112">
                 <span class="new text-button">New</span>
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">22500 Р.</s>
                 <div class="popular__newprice">15500 Р.</div>
@@ -286,8 +284,8 @@
                 <img class="bosch-6000" src="img/bosch-6000.png" alt="Перфоратор BOSCH BFG 6000" width="144"
                   height="128">
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">30500 Р.</s>
                 <div class="popular__newprice">25500 Р.</div>
@@ -298,8 +296,8 @@
                   height="112">
                 <span class="new text-button">New</span>
                 <div class="popular__buttons">
-                  <button class="popular__buy text-button" type="button">Купить</button>
-                  <button class="popular__favorites text-button" type="button">В закладки</button>
+                  <a class="popular__buy text-button" href="cart.html">Купить</a>
+                  <a class="popular__favorites text-button" href="#">В закладки</a>
                 </div>
                 <s class="popular__oldprice">22500 Р.</s>
                 <div class="popular__newprice">12500 Р.</div>
@@ -356,7 +354,7 @@
         <div class="footer-top__contacts">
           <h2 class="visually-hidden">Как нас найти:</h2>
           <p class="footer-top__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="footer-top__tel"><a href="+78125550555">+7 (812) 555-05-55</a></p>
+          <p class="footer-top__phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
         </div>
         <ul class="footer-top__promo-menu-list">
           <li><a href="#">Материалы</a></li>
@@ -417,14 +415,14 @@
   </footer>
   <section class="popup popup-cart">
     <div class="popup-cart__added">
-      <p class="popup-cart__added-text">Товар добавлен в корзину!</sp>
+      <p class="popup-cart__added-text">Товар добавлен в корзину!</p>
     </div>
     <div class="popup-buttons">
       <a class="popup-cart__button-order" href="#">Оформить заказ</a>
       <a class="popup-cart__button-buymore" href="#">Продолжить покупки</a>
     </div>
-    <button class="popup__close popur-cart__close" type="button" aria-label="Закрыть уведомление"></button>
+    <button class="popup__close popup-cart__close" type="button" aria-label="Закрыть уведомление"></button>
   </section>
+  <script src="js/script.min.js"></script>
 </body>
-
 </html>
