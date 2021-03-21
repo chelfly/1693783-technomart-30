@@ -42,7 +42,9 @@
   --white-opacity05: rgba(255, 255, 255, 0.5);
   --grey-opacity03: rgba(169, 169, 169, 0.3);
   --black-opacity03: rgba(0, 0, 0, 0.3);
+  --black-opacity04: rgba(0, 0, 0, 0.4);
   --basic-greylight-opacity03: rgba(197, 197, 197, 0.3);
+  --greydark-opacity03: rgba(181, 181, 181, 0.3);
 
 }
 
@@ -296,8 +298,13 @@ img {
   opacity: 1;
 }
 
+.header__favourites:active::before {
+  opacity: 0.3;
+}
+
 .header__favourites:active {
   background-color: var(--navyextradark);
+  color: var(--white-opacity05);
 }
 
 .header__favourites.page-catalog {
@@ -329,8 +336,13 @@ img {
   opacity: 1;
 }
 
+.header__cart:active::before {
+  opacity: 0.3;
+}
+
 .header__cart:active {
   background-color: var(--navyextradark);
+  color: var(--white-opacity05);
 }
 
 .header__cart.page-catalog {
@@ -451,11 +463,11 @@ img {
 }
 
 .header-general__login:active {
-  color: var(--basic-background);
+  color: var(--basic-greylight);
 }
 
 .header-general__login:active svg {
-  fill: var(--basic-background);
+  fill: var(--basic-greylight);
 }
 
 .header-general__signup {
@@ -472,7 +484,7 @@ img {
 }
 
 .header-general__signup:active {
-  color: var(--basic-background);
+  color: var(--basic-greylight);
 }
 
 .header-general__buttons.page-catalog {
@@ -525,13 +537,25 @@ img {
 }
 
 .header-general__user-area a {
-  color: var(--black);
+  color: var(--basic-navy);
   font-size: 16px;
   line-height: 18px;
 }
 
 .header-general__user-area a:first-child {
   padding-right: 27px;
+  position: relative;
+}
+
+.header-general__user-area a:first-child::after {
+  content: "";
+  position: absolute;
+  background-color: var(--basic-navy);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: 7px;
+  right: 9px;
 }
 
 .header-general__user-area a:hover {
@@ -578,7 +602,7 @@ img {
 
 .main-nav__list a:active {
   background-color: var(--navydark);
-  color: var(--white-opacity);
+  color: var(--white-opacity05);
 }
 
 /* Index main */
@@ -769,7 +793,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
 }
 
 .promo__nav-button {
@@ -857,12 +880,24 @@ img {
   box-shadow: 0px 4px 20px var(--shadow-lightgrey);
 }
 
-.popular__card:hover  .popular__buttons {
+.popular__card:hover .popular__buttons {
+  display: block;
+}
+
+.popular__card:focus-within .popular__buttons {
   display: block;
 }
 
 .popular__card:hover img {
   visibility: hidden;
+}
+
+.popular__card:focus-within img {
+  visibility: hidden;
+}
+
+.popular__card a {
+  color: var(--black);
 }
 
 .popular__buttons {
@@ -902,26 +937,39 @@ img {
   width: 185px;
 }
 
-.popular__buy {
+.popular__buy.text-button {
   display: block;
+  color: var(--white);
   background-color: var(--basic-green);
   border: none;
   border-radius: 2px;
   padding: 10px 40px 7px 53px;
   box-shadow: 0 3px 0 0 var(--shadow-green);
   margin-bottom: 10px;
+  position: relative;
+}
+
+.popular__buy::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
+  top: 10px;
+  left: 30px;
 }
 
 .popular__buy:hover {
   background-color: var(--green);
-
 }
 
 .popular__buy:active {
   background-color: var(--greendark);
 }
 
-.popular__favorites {
+.popular__favorites.text-button {
   display: block;
   color: var(--basic-navy);
   border: 3px solid var(--basic-green);
@@ -1206,19 +1254,25 @@ img {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 0;
-  margin: 21px 0 18px;
+  margin: 20px 0 19px;
 }
 
 .catalog-nav li {
-  padding-right: 41px;
+  padding-right: 43px;
   position: relative;
 }
 
 .catalog-nav li:first-child {
+  margin-right: 11px;
+}
+
+.catalog-nav__home {
   background-image: url("../img/icon-home.svg");
   background-repeat: no-repeat;
   width: 14px;
   height: 12px;
+  position: absolute;
+  top: 3px;
 }
 
 .catalog-nav li:first-child::before {
@@ -1400,6 +1454,11 @@ img {
   cursor: pointer;
 }
 
+.filter__input-checkbox:focus + .filter__checkbox,
+.filter__input-radio:focus + label::before {
+  outline: 2px solid var(--black);
+}
+
 .filter__input-checkbox:checked + .filter__checkbox {
   background-image: url(../img/checkbox-on.svg);
 }
@@ -1434,11 +1493,11 @@ img {
   border-radius: 50%;
 }
 
-.filter__input-radio:hover + label:hover::before {
+.filter__input-radio:hover + label::before {
   border-color: var(--greydarkhover);
 }
 
-.filter__input-radio:checked:hover + label:hover::after {
+.filter__input-radio:checked:hover + label::after {
   background-color: var(--greydarkhover);
 }
 
@@ -1638,7 +1697,7 @@ img {
   padding-top: 37px;
 }
 
-.footer-top__promo-menu {
+.footer-top__menu {
   display: flex;
   flex-wrap: wrap;
 }
